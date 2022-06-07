@@ -1,23 +1,63 @@
+#CODE ALGORITHM
+
+#get input from computer
+#get input from user
+#check if input from user is correct
+    #if not correct:
+        #get new input from user until condition is satisfied
+    #if correct
+        #check if input from user and computer is the same
+        # if true:
+        # get new input from user and computer until condition is false
+        # if the condition is satisfied 
+#check if other conditions are satisfied
+#ask user if they want to play again
+#if yes:
+    #run the game again
+#if no:
+    #end the game
+
+
 import random
+
 options = ['R','P','S']
-check = 'y'
-while check == 'y':
-    # Get input from user
-    user_choice = input("Type 'R' for Rock, 'P' for Paper and 'S' for Scissors:\n").upper()
-    # Computer makes its choice
-    computer_choice = random.choice(options)
-    # Code debug, show computer choice
-    print(f"You chose {user_choice}")
-    print(f"computer chose {computer_choice}")
+repeat = True
+replay = True
 
-    #condition check
-    if user_choice == computer_choice:
-        print("It is a tie, try again")
-    elif (user_choice=='R' and computer_choice=='P') or (user_choice=='P' and computer_choice=='S') or (user_choice=='S' and computer_choice=='R'):
-        print('you lose')
-    else:
-        print('you win')
+while replay ==  True:
+    while repeat == True:
+        #get computer and user input
+        computer_choice = random.choice(options)
+        user_choice = input("Type 'R' for Rock, 'P' for Paper and 'S' for Scissors:\n").upper()
+        
+        #code debug
+        print(f"You chose {user_choice}")
+        print(f"computer chose {computer_choice}")
 
+        #condition check
+        if user_choice not in options:
+            print('oops! you chose a wrong letter\nchoose again')
+        elif user_choice == computer_choice:
+            print("It is a tie, choose again")
+        else:
+            if (user_choice=='R' and computer_choice=='P') or (user_choice=='P' and computer_choice=='S') or (user_choice=='S' and computer_choice=='R'):
+                print('you lose')
+            else:
+                print('you win')
+                break
+            break
+    
     #Play again?
-    print('Do you want to play again?')
-    check = input("Type 'y' for yes, 'n' for no\n").lower()
+    n = 0
+    while n < 20:
+        print('Do you want to play again?')
+        check = input("Type 'y' for yes, 'n' for no\n").lower()
+        if check == 'n':
+            replay = False
+            break
+        elif check == 'y':
+            replay
+            break
+        else:
+            print('You typed a wrong input')
+            n+=1
