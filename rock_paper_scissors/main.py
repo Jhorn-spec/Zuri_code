@@ -19,6 +19,7 @@
 
 
 import random
+from clearit import clear
 
 options = ['R','P','S']
 repeat = True
@@ -29,6 +30,7 @@ while replay ==  True:
         #get computer and user input
         computer_choice = random.choice(options)
         user_choice = input("Type 'R' for Rock, 'P' for Paper and 'S' for Scissors:\n").upper()
+        clear()
         
         #code debug
         print(f"You chose {user_choice}")
