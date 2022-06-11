@@ -31,8 +31,8 @@ while replay ==  True:
         user_choice = input("Type 'R' for Rock, 'P' for Paper and 'S' for Scissors:\n").upper()
         
         #code debug
-        print(f"You chose {user_choice}")
-        print(f"computer chose {computer_choice}")
+        print(f"You chose {user_choice}.map('R':'Rock','P':'Paper, 'S':'Scissors')")
+        print(f"computer chose {computer_choice}.map('R':'Rock','P':'Paper, 'S':'Scissors')")
 
         #condition check
         if user_choice not in options:
