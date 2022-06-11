@@ -33,8 +33,9 @@ while replay ==  True:
         clear()
         
         #code debug
-        print(f"You chose {user_choice}.map('R':'Rock','P':'Paper, 'S':'Scissors')")
-        print(f"computer chose {computer_choice}.map('R':'Rock','P':'Paper, 'S':'Scissors')")
+        #for choice in 
+        #code_read = 
+        print(f"Player ({user_choice}) : CPU ({computer_choice})")
 
         #condition check
         if user_choice not in options:
@@ -56,6 +57,7 @@ while replay ==  True:
         check = input("Type 'y' for yes, 'n' for no\n").lower()
         if check == 'n':
             replay = False
+            print('Goodbye')
             break
         elif check == 'y':
             replay
